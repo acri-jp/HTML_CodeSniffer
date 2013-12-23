@@ -38,7 +38,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle2_Guideline2_4_2_4_3 = {
             var tabIndexExists = top.querySelector('*[tabindex]');
 
             if (tabIndexExists) {
-                HTMLCS.addMessage(HTMLCS.NOTICE, element, 'If tabindex is used, check that the tab order specified by the tabindex attributes follows relationships in the content.', 'H4.2');
+                HTMLCS.addMessage(HTMLCS.NOTICE, element, 'tabindex属性が使われている場合、それによって指定されるタブ移動順序がコンテンツの関係に従っていることを確認します。', 'H4.2');
             }
         }
     }

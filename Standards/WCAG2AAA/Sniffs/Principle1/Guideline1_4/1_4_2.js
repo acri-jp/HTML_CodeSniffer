@@ -41,7 +41,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_4_1_4_2 = {
      */
     process: function(element, top)
     {
-        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'If this element contains audio that plays automatically for longer than 3 seconds, check that there is the ability to pause, stop or mute the audio.', 'F23');
+        HTMLCS.addMessage(HTMLCS.NOTICE, top, '要素に自動的に再生され3秒以上続く音声が含まれている場合、その音声を一時停止、停止または無音にすることができるか確認します。', 'F23');
 
     }
 };

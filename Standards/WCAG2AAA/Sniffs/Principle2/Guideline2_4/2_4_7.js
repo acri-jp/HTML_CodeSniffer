@@ -40,7 +40,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle2_Guideline2_4_2_4_7 = {
         var inputField = top.querySelector('input, textarea, button, select, a');
 
         if (inputField !== null) {
-            HTMLCS.addMessage(HTMLCS.NOTICE, top, 'Check that there is at least one mode of operation where the keyboard focus indicator can be visually located on user interface controls.', 'G149,G165,G195,C15,SCR31');
+            HTMLCS.addMessage(HTMLCS.NOTICE, top, 'ユーザインターフェース・コントロールには、キーボード・フォーカス・インジケータが視覚的に認識できる操作モードが1つ以上あるか確認します。', 'G149,G165,G195,C15,SCR31');
         }
 
     }

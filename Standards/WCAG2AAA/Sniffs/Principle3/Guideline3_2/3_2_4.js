@@ -34,7 +34,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle3_Guideline3_2_3_2_4 = {
      */
     process: function(element, top)
     {
-        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'Check that components that have the same functionality within this Web page are identified consistently in the set of Web pages to which it belongs.', 'G197');
+        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'このウェブページで、同じ機能を持つコンポーネントは一貫して識別できることを確認します。', 'G197');
 
     }
 };

@@ -37,7 +37,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_4_1_4_9 = {
         var imgObj = top.querySelector('img');
 
         if (imgObj !== null) {
-            HTMLCS.addMessage(HTMLCS.NOTICE, top, 'Check that images of text are only used for pure decoration or where a particular presentation of text is essential to the information being conveyed.', 'G140,C22,C30.NoException');
+            HTMLCS.addMessage(HTMLCS.NOTICE, top, '画像化テキストは、純粋な装飾および、伝達する情報にとって必要不可欠な場合にのみ利用されていることを確認します。', 'G140,C22,C30.NoException');
         }
     }
 };

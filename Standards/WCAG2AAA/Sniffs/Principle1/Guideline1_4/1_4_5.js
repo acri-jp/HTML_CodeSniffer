@@ -37,7 +37,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_4_1_4_5 = {
         var imgObj = top.querySelector('img');
 
         if (imgObj !== null) {
-            HTMLCS.addMessage(HTMLCS.NOTICE, top, 'If the technologies being used can achieve the visual presentation, check that text is used to convey information rather than images of text, except when the image of text is essential to the information being conveyed, or can be visually customised to the user\'s requirements.', 'G140,C22,C30.AALevel');
+            HTMLCS.addMessage(HTMLCS.NOTICE, top, '画像テキストが伝えようとする情報に必要不可欠であるか、利用者の要求に応じて視覚的にカスタマイズできる場合を除き、使用している技術で視覚的な表現が可能であれば、情報は画像化テキストではなくテキストで伝えられているか確認します。', 'G140,C22,C30.AALevel');
         }
 
     }

@@ -34,7 +34,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle3_Guideline3_1_3_1_5 = {
      */
     process: function(element, top)
     {
-        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'Where the content requires reading ability more advanced than the lower secondary education level, supplemental content or an alternative version should be provided.', 'G86,G103,G79,G153,G160');
+        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'コンテンツが中学校教育レベルの読解力を必要とする場合、補助コンテンツまたは代替バージョンを提供するべきです。', 'G86,G103,G79,G153,G160');
 
     }
 };

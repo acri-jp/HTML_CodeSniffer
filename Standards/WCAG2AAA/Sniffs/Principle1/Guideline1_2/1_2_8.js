@@ -39,7 +39,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_2_1_2_8 = {
      */
     process: function(element, top)
     {
-        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'If this embedded object contains pre-recorded synchronised media or video-only content, check that an alternative text version of the content is provided.', 'G69,G159');
+        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'この埋め込みオブジェクトが収録済の同期したメディアまたは動画のみのコンテンツを含んでいる場合、コンテンツの代替テキストバージョンが提供されていることを確認してください。', 'G69,G159');
 
     }
 };

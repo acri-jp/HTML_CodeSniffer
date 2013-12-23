@@ -34,6 +34,6 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle3_Guideline3_3_3_3_5 = {
      */
     process: function(element, top)
     {
-        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'Check that context-sensitive help is available for this form, at a Web-page and/or control level.', 'G71,G184,G193');
+        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'このフォームで、ページレベルまたはコントロール・レベルで状況依存のヘルプが提供されていることを確認します。', 'G71,G184,G193');
     }
 };

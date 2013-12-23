@@ -34,7 +34,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle2_Guideline2_2_2_2_4 = {
      */
     process: function(element, top)
     {
-        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'Check that all interruptions (including updates to content) can be postponed or suppressed by the user, except interruptions involving an emergency.', 'SCR14');
+        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'コンテンツの更新を含むすべてのアラートは、緊急の場合を除いて利用者が延期または無効にできることを確認してください。', 'SCR14');
 
     }
 };

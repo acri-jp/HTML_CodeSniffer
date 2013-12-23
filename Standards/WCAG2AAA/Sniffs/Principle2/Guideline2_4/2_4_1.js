@@ -77,9 +77,9 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle2_Guideline2_4_2_4_1 = {
             }
 
             if (hasTitle === false) {
-                HTMLCS.addMessage(HTMLCS.ERROR, element, 'Iframe element requires a non-empty title attribute that identifies the frame.', 'H64.1');
+                HTMLCS.addMessage(HTMLCS.ERROR, element, 'iframe要素には、フレームを識別できる空ではないtitle属性が必要です。', 'H64.1');
             } else {
-                HTMLCS.addMessage(HTMLCS.NOTICE, element, 'Check that the title attribute of this element contains text that identifies the frame.', 'H64.2');
+                HTMLCS.addMessage(HTMLCS.NOTICE, element, 'この要素のtitle属性には、フレームを識別できるテキストが含まれているか確認します。', 'H64.2');
             }
         }//end if
     },
@@ -93,7 +93,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle2_Guideline2_4_2_4_1 = {
      */
     testGenericBypassMsg: function(top)
     {
-        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'Ensure that any common navigation elements can be bypassed; for instance, by use of skip links, header elements, or ARIA landmark roles.', 'G1,G123,G124,H69');
+        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'すべてのナビゲーション要素がスキップできることを確認します。たとえばスキップリンク、見出し、ARIA landmark roleを使うことによって', 'G1,G123,G124,H69');
     },
 
     /**
@@ -131,9 +131,9 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle2_Guideline2_4_2_4_1 = {
 
                     if ((target === null) || (HTMLCS.util.contains(top, target) === false)) {
                         if ((HTMLCS.isFullDoc(top) === true) || (top.nodeName.toLowerCase() === 'body')) {
-                            HTMLCS.addMessage(HTMLCS.ERROR, element, 'This link points to a named anchor "' + id + '" within the document, but no anchor exists with that name.', 'G1,G123,G124.NoSuchID');
+                            HTMLCS.addMessage(HTMLCS.ERROR, element, 'このリンクはこのドキュメントの "' + id + '" というアンカーを指していますが、そのようなname属性を持つアンカーがありません。', 'G1,G123,G124.NoSuchID');
                         } else {
-                            HTMLCS.addMessage(HTMLCS.WARNING, element, 'This link points to a named anchor "' + id + '" within the document, but no anchor exists with that name in the fragment tested.', 'G1,G123,G124.NoSuchIDFragment');
+                            HTMLCS.addMessage(HTMLCS.WARNING, element, 'このリンクはこのドキュメントの "' + id + '" というアンカーを指していますが、テストしているHTML断片にはそのようなname属性を持つアンカーがありません。', 'G1,G123,G124.NoSuchIDFragment');
                         }
                     }
                 } catch (ex) {

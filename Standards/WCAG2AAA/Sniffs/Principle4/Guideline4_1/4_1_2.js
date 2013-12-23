@@ -48,27 +48,27 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle4_Guideline4_1_4_1_2 = {
     {
         var errors = this.processLinks(top);
         for (var i = 0; i < errors.empty.length; i++) {
-            HTMLCS.addMessage(HTMLCS.WARNING, errors.empty[i], 'Anchor element found with an ID but without a href or link text. Consider moving its ID to a parent or nearby element.', 'H91.A.Empty');
+            HTMLCS.addMessage(HTMLCS.WARNING, errors.empty[i], 'id属性の指定されたa要素が見つかりましたが、href属性が指定されていないかリンクテキストがありません。id属性を親要素または近隣の要素に移動することを検討してください。', 'H91.A.Empty');
         }
 
         for (var i = 0; i < errors.emptyWithName.length; i++) {
-            HTMLCS.addMessage(HTMLCS.WARNING, errors.emptyWithName[i], 'Anchor element found with a name attribute but without a href or link text. Consider moving the name attribute to become an ID of a parent or nearby element.', 'H91.A.EmptyWithName');
+            HTMLCS.addMessage(HTMLCS.WARNING, errors.emptyWithName[i], 'name属性が指定されているa要素が見つかりましたが、href属性が指定されていないかリンクテキストがありません。id属性を親要素または近隣の要素に移動することを検討してください。', 'H91.A.EmptyWithName');
         }
 
         for (var i = 0; i < errors.emptyNoId.length; i++) {
-            HTMLCS.addMessage(HTMLCS.ERROR, errors.emptyNoId[i], 'Anchor element found with no link content and no name and/or ID attribute.', 'H91.A.EmptyNoId');
+            HTMLCS.addMessage(HTMLCS.ERROR, errors.emptyNoId[i], '内容が空で、name属性とid属性の両方またはどちらかが指定されていないa要素が見つかりました。', 'H91.A.EmptyNoId');
         }
 
         for (var i = 0; i < errors.noHref.length; i++) {
-            HTMLCS.addMessage(HTMLCS.WARNING, errors.noHref[i], 'Anchor elements should not be used for defining in-page link targets. If not using the ID for other purposes (such as CSS or scripting), consider moving it to a parent element.', 'H91.A.NoHref');
+            HTMLCS.addMessage(HTMLCS.WARNING, errors.noHref[i], 'a要素はページ内リンクのターゲット定義として用いるべきではありません。id属性を、CSSやスクリプトに利用していないのであれば、親要素または近隣の要素に移動することを検討してください。', 'H91.A.NoHref');
         }
 
         for (var i = 0; i < errors.placeholder.length; i++) {
-            HTMLCS.addMessage(HTMLCS.WARNING, errors.placeholder[i], 'Anchor element found with link content, but no href, ID or name attribute has been supplied.', 'H91.A.Placeholder');
+            HTMLCS.addMessage(HTMLCS.WARNING, errors.placeholder[i], '内容は指定されているがhref属性が指定されておらず、id属性またはname属性も指定されていないa要素が検出されました。', 'H91.A.Placeholder');
         }
 
         for (var i = 0; i < errors.noContent.length; i++) {
-            HTMLCS.addMessage(HTMLCS.ERROR, errors.noContent[i], 'Anchor element found with a valid href attribute, but no link content has been supplied.', 'H91.A.NoContent');
+            HTMLCS.addMessage(HTMLCS.ERROR, errors.noContent[i], '妥当なhref属性が指定されているが内容が空のa要素が検出されました。', 'H91.A.NoContent');
         }
     },
 

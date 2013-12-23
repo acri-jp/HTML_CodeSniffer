@@ -34,6 +34,6 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle3_Guideline3_3_3_3_6 = {
      */
     process: function(element, top)
     {
-        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'Check that submissions to this form are either reversible, checked for input errors, and/or confirmed by the user.', 'G98,G99,G155,G164,G168.AllForms');
+        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'このフォームが、フォームから送信した情報を取り消すことができるか、入力データのエラーを利用者が確認・修正することが可能か確認してください。', 'G98,G99,G155,G164,G168.AllForms');
     }
 };

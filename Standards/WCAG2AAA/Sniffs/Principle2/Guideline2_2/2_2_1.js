@@ -43,10 +43,10 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle2_Guideline2_2_2_2_1 = {
                 if (/^[1-9]\d*/.test(element.getAttribute('content').toLowerCase()) === true) {
                     if (/url=/.test(element.getAttribute('content').toLowerCase()) === true) {
                         // Redirect.
-                        HTMLCS.addMessage(HTMLCS.ERROR, element, 'Meta refresh tag used to redirect to another page, with a time limit that is not zero. Users cannot control this time limit.', 'F40.2');
+                        HTMLCS.addMessage(HTMLCS.ERROR, element, 'タイムアウト0のmeta要素が他のページへのリダイレクトに設定されています。利用者は、この制限時間を調整することができません。', 'F40.2');
                     } else {
                         // Just a refresh.
-                        HTMLCS.addMessage(HTMLCS.ERROR, element, 'Meta refresh tag used to refresh the current page. Users cannot control the time limit for this refresh.', 'F41.2');
+                        HTMLCS.addMessage(HTMLCS.ERROR, element, 'このページの自動更新にmeta要素が使われています。利用者は、この更新の時間制限を調整することができません。', 'F41.2');
                     }
                 }
             }//end if

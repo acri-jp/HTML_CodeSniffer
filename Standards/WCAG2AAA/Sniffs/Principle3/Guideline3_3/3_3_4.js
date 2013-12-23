@@ -34,6 +34,6 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle3_Guideline3_3_3_3_4 = {
      */
     process: function(element, top)
     {
-        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'If this form would bind a user to a financial or legal commitment, modify/delete user-controllable data, or submit test responses, ensure that submissions are either reversible, checked for input errors, and/or confirmed by the user.', 'G98,G99,G155,G164,G168.LegalForms');
+        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'このフォームが、利用者に金融や法律上の責任を生じさせる、ユーザーが自ら制御可能なデータを編集・削除するあるいは試験結果を送信する場合、フォームから送信した情報を取り消すことができるか、入力データのエラーを利用者が確認・修正することが可能か確認してください。', 'G98,G99,G155,G164,G168.LegalForms');
     }
 };

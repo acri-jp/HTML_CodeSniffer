@@ -37,19 +37,19 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle3_Guideline3_1_3_1_1 = {
         if ((element.hasAttribute('lang') === false) && (element.hasAttribute('xml:lang') === false)) {
             // TODO: if we can tell whether it's HTML or XHTML, we should split this
             // into two - one asking for "lang", the other for "xml:lang".
-            HTMLCS.addMessage(HTMLCS.ERROR, element, 'The html element should have a lang or xml:lang attribute which describes the language of the document.', 'H57.2');
+            HTMLCS.addMessage(HTMLCS.ERROR, element, 'html要素には、lang属性またはxml:lang属性を指定し、文書の初期自然言語を指定します。', 'H57.2');
         } else {
             if (element.hasAttribute('lang') === true) {
                 var lang = element.getAttribute('lang');
                 if (this.isValidLanguageTag(lang) === false) {
-                    HTMLCS.addMessage(HTMLCS.ERROR, top, 'The language specified in the lang attribute of the document element does not appear to be well-formed.', 'H57.3.Lang');
+                    HTMLCS.addMessage(HTMLCS.ERROR, top, 'html要素に指定されたlang属性がwell-formedではないようです。', 'H57.3.Lang');
                 }
             }
 
             if (element.hasAttribute('xml:lang') === true) {
                 var lang = element.getAttribute('xml:lang');
                 if (this.isValidLanguageTag(lang) === false) {
-                    HTMLCS.addMessage(HTMLCS.ERROR, top, 'The language specified in the xml:lang attribute of the document element does not appear to be well-formed.', 'H57.3.XmlLang');
+                    HTMLCS.addMessage(HTMLCS.ERROR, top, 'html要素に指定されたxml:lang属性がwell-formedではないようです。', 'H57.3.XmlLang');
                 }
             }
         }

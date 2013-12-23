@@ -40,7 +40,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_2_1_2_9 = {
      */
     process: function(element, top)
     {
-        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'If this embedded object contains live audio-only content, check that an alternative text version of the content is provided.', 'G150,G151,G157');
+        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'この埋め込みオブジェクトがライブの音声のみのコンテンツである場合、コンテンツの代替テキストバージョンが提供されていることを確認してください', 'G150,G151,G157');
 
     }
 };

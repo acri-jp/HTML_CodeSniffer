@@ -34,7 +34,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_3_1_3_3 = {
      */
     process: function(element, top)
     {
-        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'Where instructions are provided for understanding the content, do not rely on sensory characteristics alone (such as shape, size or location) to describe objects.', 'G96');
+        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'コンテンツを理解するために作業指示が提供されている場合、オブジェクトの説明を形状、サイズや位置のような感覚のみで伝えないようにします。', 'G96');
 
     }
 };

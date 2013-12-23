@@ -40,16 +40,16 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle2_Guideline2_4_2_4_8 = {
         // HEAD element". HTML5 states it appears "wherever metadata content is
         // expected", which only includes the head element.
         if (linkParentName !== 'head') {
-            HTMLCS.addMessage(HTMLCS.ERROR, element, 'Link elements can only be located in the head section of the document.', 'H59.1');
+            HTMLCS.addMessage(HTMLCS.ERROR, element, 'link要素は、ドキュメントのhead要素セクションの中にのみ配置することができます。', 'H59.1');
         }
 
         // Check for mandatory elements.
         if ((element.hasAttribute('rel') === false) || (!element.getAttribute('rel')) || (/^\s*$/.test(element.getAttribute('rel')) === true)) {
-            HTMLCS.addMessage(HTMLCS.ERROR, element, 'Link element is missing a non-empty rel attribute identifying the link type.', 'H59.2a');
+            HTMLCS.addMessage(HTMLCS.ERROR, element, 'link要素にリンクタイプを特定するためのrel属性がないか空になっています。', 'H59.2a');
         }
 
         if ((element.hasAttribute('href') === false) || (!element.getAttribute('href')) || (/^\s*$/.test(element.getAttribute('href')) === true)) {
-            HTMLCS.addMessage(HTMLCS.ERROR, element, 'Link element is missing a non-empty href attribute pointing to the resource being linked.', 'H59.2b');
+            HTMLCS.addMessage(HTMLCS.ERROR, element, 'link要素に該当するリソースの場所を示すためのhref属性がないか空になっています。', 'H59.2b');
         }
     }
 };

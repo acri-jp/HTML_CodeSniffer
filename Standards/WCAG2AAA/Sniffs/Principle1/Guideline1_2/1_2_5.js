@@ -39,7 +39,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_2_1_2_5 = {
      */
     process: function(element, top)
     {
-        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'If this embedded object contains pre-recorded synchronised media, check that an audio description is provided for its video content.', 'G78,G173,G8');
+        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'この埋め込みオブジェクトが収録済の同期したメディアを含む場合、その動画コンテンツに音声ガイドが提供されているか確認してください', 'G78,G173,G8');
 
     }
 };

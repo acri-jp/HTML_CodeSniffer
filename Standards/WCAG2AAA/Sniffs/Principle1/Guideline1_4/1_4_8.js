@@ -36,11 +36,11 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_4_1_4_8 = {
     {
         // This Success Criterion has five prongs, and each should be thrown as a
         // separate notice as separate techniques apply to each.
-        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'Check that a mechanism is available for the user to select foreground and background colours for blocks of text, either through the Web page or the browser.', 'G148,G156,G175');
-        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'Check that a mechanism exists to reduce the width of a block of text to no more than 80 characters (or 40 in Chinese, Japanese or Korean script).', 'H87,C20');
-        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'Check that blocks of text are not fully justified - that is, to both left and right edges - or a mechanism exists to remove full justification.', 'C19,G172,G169');
-        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'Check that line spacing in blocks of text are at least 150% in paragraphs, and paragraph spacing is at least 1.5 times the line spacing, or that a mechanism is available to achieve this.', 'G188,C21');
-        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'Check that text can be resized without assistive technology up to 200 percent without requiring the user to scroll horizontally on a full-screen window.', 'H87,G146,C26');
+        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'Webページかブラウザを通じて、利用者がテキストのブロックの前景色と背景色を選択する仕組みが提供されているか確認します。', 'G148,G156,G175');
+        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'テキストのブロックの各行の文字数を80文字以下(または中国語、日本語、韓国語の場合は40文字以下)に減らす仕組みが提供されているか確認します。', 'H87,C20');
+        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'テキストのブロックがすべて両端ぞろえではないことを確認します - つまり、左揃えか右揃えになっているか、すべての両端揃えを解除する仕組みが提供されているかです。', 'C19,G172,G169');
+        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'テキストブロックの行間は少なくとも150%であり、段落間間隔は行間隔の1.5倍あるか、これを達成する仕組みが利用可能であることを確認します。', 'G188,C21');
+        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'コンテンツまたは機能を損なうことなく、利用者が全画面表示で水平スクロールすることなく、テキストを支援技術なしで200%まで変更できることを確認してください。', 'H87,G146,C26');
 
     }
 };

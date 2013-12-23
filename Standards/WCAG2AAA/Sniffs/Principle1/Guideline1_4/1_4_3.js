@@ -66,10 +66,10 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_4_1_4_3 = {
 
                 if (hasBgImg === true) {
                     code += '.BgImage';
-                    HTMLCS.addMessage(HTMLCS.WARNING, element, 'This element\'s text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least ' + required + ':1.', code);
+                    HTMLCS.addMessage(HTMLCS.WARNING, element, 'この要素のテキストは背景画像の上に配置されています。テキストと画像のすべてのカバー部分が少なくとも ' + required + ':1 のコントラスト比を持つことを確認します。', code);
                 } else {
                     code += '.Fail';
-                    HTMLCS.addMessage(HTMLCS.ERROR, element, 'This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least ' + required + ':1, but text in this element has a contrast ratio of ' + value + ':1.' + recommendText, code);
+                    HTMLCS.addMessage(HTMLCS.ERROR, element, 'この要素のコントラストはこの達成等級では不適合です。期待されるコントラスト比は最低 ' + required + ':1 ですが、この要素のテキストのコントラスト比は ' + value + ':1 となっています。' + recommendText, code);
                 }//end if
             }//end for
         }//end if

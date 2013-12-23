@@ -39,7 +39,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_2_1_2_6 = {
      */
     process: function(element, top)
     {
-        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'If this embedded object contains pre-recorded synchronised media, check that a sign language interpretation is provided for its audio.', 'G54,G81');
+        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'この埋め込みオブジェクトが収録済の同期したメディアを含む場合、その音声に対して手話通訳が提供されているか確認してください。', 'G54,G81');
 
     }
 };

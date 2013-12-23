@@ -35,7 +35,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle3_Guideline3_1_3_1_2 = {
     process: function(element, top)
     {
         // Generic message for changes in language.
-        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'Ensure that any change in language is marked using the lang and/or xml:lang attribute on an element, as appropriate.', 'H58');
+        HTMLCS.addMessage(HTMLCS.NOTICE, top, 'ページ上で用いられる自然言語の変化は、必要に応じてlang属性やxml:lang属性によって明示されていることを確認してください。', 'H58');
 
         // Alias the SC 3.1.1 object, which contains our "valid language tag" test.
         var sc3_1_1 = HTMLCS_WCAG2AAA_Sniffs_Principle3_Guideline3_1_3_1_1;
@@ -58,14 +58,14 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle3_Guideline3_1_3_1_2 = {
                 if (langEl.hasAttribute('lang') === true) {
                     var lang = langEl.getAttribute('lang');
                     if (sc3_1_1.isValidLanguageTag(lang) === false) {
-                        HTMLCS.addMessage(HTMLCS.ERROR, langEl, 'The language specified in the lang attribute of this element does not appear to be well-formed.', 'H58.1.Lang');
+                        HTMLCS.addMessage(HTMLCS.ERROR, langEl, 'この要素に指定されたlang属性がwell-formedではないようです。', 'H58.1.Lang');
                     }
                 }
 
                 if (langEl.hasAttribute('xml:lang') === true) {
                     var lang = langEl.getAttribute('xml:lang');
                     if (sc3_1_1.isValidLanguageTag(lang) === false) {
-                        HTMLCS.addMessage(HTMLCS.ERROR, langEl, 'The language specified in the xml:lang attribute of this element does not appear to be well-formed.', 'H58.1.XmlLang');
+                        HTMLCS.addMessage(HTMLCS.ERROR, langEl, '要素に指定されたxml:lang属性がwell-formedではないようです。', 'H58.1.XmlLang');
                     }
                 }
             }//end if

@@ -34,7 +34,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle2_Guideline2_4_2_4_5 = {
      */
     process: function(element, top)
     {
-        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'If this Web page is not part of a linear process, check that there is more than one way of locating this Web page within a set of Web pages.', 'G125,G64,G63,G161,G126,G185');
+        HTMLCS.addMessage(HTMLCS.NOTICE, element, 'もしこのページが一連のプロセスの一部ではない場合、ウェブページ一式の中からこのページに到達する手段が複数あることを確認します。', 'G125,G64,G63,G161,G126,G185');
 
     }
 };
