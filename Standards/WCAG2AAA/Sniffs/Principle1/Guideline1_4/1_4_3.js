@@ -53,15 +53,15 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_4_1_4_3 = {
                 var recommendText = [];
                 if (recommend) {
                     if (recommend.fore.from !== recommend.fore.to) {
-                        recommendText.push('text colour to ' + recommend.fore.to);
+                        recommendText.push('テキストの色を ' + recommend.fore.to);
                     }
                     if (recommend.back.from !== recommend.back.to) {
-                        recommendText.push('background to ' + recommend.back.to);
+                        recommendText.push('背景色を ' + recommend.back.to);
                     }
                 }//end if
 
                 if (recommendText.length > 0) {
-                    recommendText = ' Recommendation: change ' + recommendText.join(', ') + '.';
+                    recommendText = ' 推奨: ' + recommendText.join(', ') + ' に変更。';
                 }
 
                 if (hasBgImg === true) {

@@ -262,7 +262,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle4_Guideline4_1_4_1_2 = {
                         }
                     }
 
-                    var msg = 'This ' + msgNodeType + ' does not have a name available to an accessibility API. Valid names are: ' + builtAttrs.join(', ') + '.';
+                    var msg = '要素: ' + msgNodeType + ' は、アクセシビリティAPIに結び付ける識別名(Name)を提供していません。妥当な識別名は: ' + builtAttrs.join(', ') + 'です。';
                     errors.push({
                         element: element,
                         msg: msg,
@@ -320,7 +320,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle4_Guideline4_1_4_1_2 = {
                     builtAttr = 'using the ' + requiredValue + ' element';
                 }
 
-                var msg = 'This ' + msgNodeType + ' does not have a value available to an accessibility API. Add one ' + builtAttr + '.';
+                var msg = '要素: ' + msgNodeType + ' は、アクセシビリティAPIに結び付ける値(Value)を提供していません。 ' + builtAttr + ' を追加してください。';
                 errors.push({
                     element: element,
                     msg: msg,
