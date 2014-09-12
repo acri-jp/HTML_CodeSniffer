@@ -337,8 +337,8 @@ var HTMLCSAuditor = new function()
         var lineageReportLink       = _doc.createElement('a');
         lineageReportLink.className = _prefix + 'lineage-link';
         lineageReportLink.href      = 'javascript:';
-        lineageReportLink.innerHTML = 'ƒŒƒ|[ƒg';
-        lineageReportLink.setAttribute('title', 'ƒŒƒ|[ƒg‚É–ß‚é');
+        lineageReportLink.innerHTML = 'ãƒ¬ãƒãƒ¼ãƒˆ';
+        lineageReportLink.setAttribute('title', 'ãƒ¬ãƒãƒ¼ãƒˆã«æˆ»ã‚‹');
 
         lineageReportLink.onmousedown = function() {
             var list = _doc.querySelectorAll('.HTMLCS-inner-wrapper')[0];
@@ -365,7 +365,7 @@ var HTMLCSAuditor = new function()
         var buttonGroup       = _doc.createElement('div');
         buttonGroup.className = _prefix + 'button-group';
 
-        var prevButton = buildSummaryButton(_prefix + 'button-previous-issue', 'previous', '‘O‚Ì‰Û‘è', function(target) {
+        var prevButton = buildSummaryButton(_prefix + 'button-previous-issue', 'previous', 'å‰ã®èª²é¡Œ', function(target) {
             var newIssue = Number(issue) - 1;
 
             if (newIssue >= 1) {
@@ -381,7 +381,7 @@ var HTMLCSAuditor = new function()
             }//end if
         });
 
-        var nextButton = buildSummaryButton(_prefix + 'button-next-issue', 'next', 'Ÿ‚Ì‰Û‘è', function(target) {
+        var nextButton = buildSummaryButton(_prefix + 'button-next-issue', 'next', 'æ¬¡ã®èª²é¡Œ', function(target) {
             var newIssue = Number(issue) + 1;
 
             if (newIssue <= _messages.length) {
@@ -479,7 +479,7 @@ var HTMLCSAuditor = new function()
         useStandardDiv.id = _prefix + 'settings-use-standard';
 
         var useStandardLabel       = _doc.createElement('label');
-        useStandardLabel.innerHTML = '’B¬“™‹‰:';
+        useStandardLabel.innerHTML = 'é”æˆç­‰ç´š:';
         useStandardLabel.setAttribute('for', _prefix + 'settings-use-standard-select');
 
         var useStandardSelect       = _doc.createElement('select');
@@ -509,11 +509,11 @@ var HTMLCSAuditor = new function()
 
         var issueCountHelpDiv       = _doc.createElement('div');
         issueCountHelpDiv.id        = _prefix + 'settings-issue-count-help';
-        issueCountHelpDiv.innerHTML = 'ƒŒƒ|[ƒg‚ÉŠÜ‚ß‚é‰Û‘è‚Ìí—Ş‚ğ‘I‘ğ‚µ‚Ü‚·B';
+        issueCountHelpDiv.innerHTML = 'ãƒ¬ãƒãƒ¼ãƒˆã«å«ã‚ã‚‹èª²é¡Œã®ç¨®é¡ã‚’é¸æŠã—ã¾ã™ã€‚';
 
         var viewReportDiv       = _doc.createElement('div');
         viewReportDiv.id        = _prefix + 'settings-view-report';
-        viewReportDiv.innerHTML = 'ƒŒƒ|[ƒg‚ğŒ©‚é';
+        viewReportDiv.innerHTML = 'ãƒ¬ãƒãƒ¼ãƒˆã‚’è¦‹ã‚‹';
 
         viewReportDiv.onclick = function() {
             if (/disabled/.test(this.className) === false) {
@@ -834,7 +834,7 @@ var HTMLCSAuditor = new function()
             msgElementSourceHeader.className = _prefix + 'issue-source-header';
 
             var msgSourceHeaderText       = _doc.createElement('strong');
-            msgSourceHeaderText.innerHTML = '–â‘è‚ÌHTML•”•ª';
+            msgSourceHeaderText.innerHTML = 'å•é¡Œã®HTMLéƒ¨åˆ†';
 
             var btnPointTo = buildSummaryButton(_prefix + 'button-point-to-element-' + id, 'pointer', 'Point to Element', function() {
                 self.pointToElement(message.element);
