@@ -337,8 +337,8 @@ var HTMLCSAuditor = new function()
         var lineageReportLink       = _doc.createElement('a');
         lineageReportLink.className = _prefix + 'lineage-link';
         lineageReportLink.href      = 'javascript:';
-        lineageReportLink.innerHTML = 'Report';
-        lineageReportLink.setAttribute('title', 'Back to Report');
+        lineageReportLink.innerHTML = 'レポート';
+        lineageReportLink.setAttribute('title', 'レポートに戻る');
 
         lineageReportLink.onmousedown = function() {
             var list = _doc.querySelectorAll('.HTMLCS-inner-wrapper')[0];
@@ -365,7 +365,7 @@ var HTMLCSAuditor = new function()
         var buttonGroup       = _doc.createElement('div');
         buttonGroup.className = _prefix + 'button-group';
 
-        var prevButton = buildSummaryButton(_prefix + 'button-previous-issue', 'previous', 'Previous Issue', function(target) {
+        var prevButton = buildSummaryButton(_prefix + 'button-previous-issue', 'previous', '前の課題', function(target) {
             var newIssue = Number(issue) - 1;
 
             if (newIssue >= 1) {
@@ -381,7 +381,7 @@ var HTMLCSAuditor = new function()
             }//end if
         });
 
-        var nextButton = buildSummaryButton(_prefix + 'button-next-issue', 'next', 'Next Issue', function(target) {
+        var nextButton = buildSummaryButton(_prefix + 'button-next-issue', 'next', '次の課題', function(target) {
             var newIssue = Number(issue) + 1;
 
             if (newIssue <= _messages.length) {
@@ -479,7 +479,7 @@ var HTMLCSAuditor = new function()
         useStandardDiv.id = _prefix + 'settings-use-standard';
 
         var useStandardLabel       = _doc.createElement('label');
-        useStandardLabel.innerHTML = 'Standards:';
+        useStandardLabel.innerHTML = '達成等級:';
         useStandardLabel.setAttribute('for', _prefix + 'settings-use-standard-select');
 
         var useStandardSelect       = _doc.createElement('select');
@@ -509,7 +509,7 @@ var HTMLCSAuditor = new function()
 
         var issueCountHelpDiv       = _doc.createElement('div');
         issueCountHelpDiv.id        = _prefix + 'settings-issue-count-help';
-        issueCountHelpDiv.innerHTML = 'Select the types of issues to include in the report';
+        issueCountHelpDiv.innerHTML = 'レポートに含める課題の種類を選択します。';
 
         var viewReportDiv       = _doc.createElement('div');
         viewReportDiv.id        = _prefix + 'settings-view-report';
@@ -834,7 +834,7 @@ var HTMLCSAuditor = new function()
             msgElementSourceHeader.className = _prefix + 'issue-source-header';
 
             var msgSourceHeaderText       = _doc.createElement('strong');
-            msgSourceHeaderText.innerHTML = 'Code Snippet';
+            msgSourceHeaderText.innerHTML = '問題のHTML部分';
 
             var btnPointTo = buildSummaryButton(_prefix + 'button-point-to-element-' + id, 'pointer', 'Point to Element', function() {
                 self.pointToElement(message.element);
