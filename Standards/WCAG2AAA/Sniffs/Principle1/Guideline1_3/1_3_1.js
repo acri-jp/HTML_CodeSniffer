@@ -670,7 +670,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_3_1_3_1 = {
                     break;
                 } if (/^\d+[:\/\-.]?\s+/.test(items[0]) === true) {
                     // Test for "1 " cases (or "1. ", "1: ", "1- ").
-                    HTMLCS.addMessage(HTMLCS.WARNING, element, 'リストの視覚表現を用いた順序付き箇条書きがコンテンツに含まれているようです。この内容はol要素を利用してマークアップすることが適切と思われます。'H48.2');
+                    HTMLCS.addMessage(HTMLCS.WARNING, element, 'リストの視覚表現を用いた順序付き箇条書きがコンテンツに含まれているようです。この内容はol要素を利用してマークアップすることが適切と思われます。','H48.2');
                     break;
                 }
             }//end for
