@@ -21,6 +21,7 @@ var HTMLCSAuditor = new function()
     var _doc      = null;
     var _messages = [];
     var _page     = 1;
+    var _sbWidth  = null;
 
     var self = this;
 
@@ -1534,7 +1535,7 @@ var HTMLCSAuditor = new function()
                 _doc.documentElement.querySelector('.HTMLCS-settings').appendChild(msgElementSource);
 
                 var msg = 'HTML_CodeSniffer has been updated to version ' + response.newVersion + '.';
-                msg    += ' <a href="http://squizlabs.github.com/HTML_CodeSniffer/patches/' + response.newVersion + '">View the changelog</a>'
+                msg    += ' <a href="http://squizlabs.github.io/HTML_CodeSniffer/patches/' + response.newVersion + '">View the changelog</a>'
 
                 msgElementSource.innerHTML = msg;
             }//end if
@@ -1694,8 +1695,8 @@ var HTMLCSAuditor = new function()
 
         getScrollbarWidth: function(elem)
         {
-            if (this.scrollBarWidth) {
-                return this.scrollBarWidth;
+            if (_sbWidth !== null) {
+                return _sbWidth;
             }
 
             doc = elem.ownerDocument;
@@ -1736,8 +1737,9 @@ var HTMLCSAuditor = new function()
 
             // Pixel width of the scroller.
             var scrollBarWidth = (widthNoScrollBar - widthWithScrollBar);
-            // Set the DOM variable so we don't have to run this again.
-            this.scrollBarWidth = scrollBarWidth;
+            
+            // Set the auditor-level variable so we don't have to run this again.
+            _sbWidth = scrollBarWidth;
             return scrollBarWidth;
 
         },

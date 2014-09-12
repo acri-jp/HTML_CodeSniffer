@@ -109,11 +109,6 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_3_1_3_1 = {
             if ((labels[i].hasAttribute('for') === true) && (labels[i].getAttribute('for') !== '')) {
                 var labelFor = labels[i].getAttribute('for');
                 if ((this._labelNames[labelFor]) && (this._labelNames[labelFor] !== null)) {
-                    // Multiple labels with same "for" attribute shouldn't exist.
-                    // They could be a sign of duplicate form controls, and ife
-                    // they are not, it's not good practice to have multiple labels
-                    // for the one control.
-                    HTMLCS.addMessage(HTMLCS.ERROR, labels[i], '同じfor属性の複数のラベルが存在します。これらのラベルが異なるフォームコントロールを参照している場合、コントロールにそれぞれ個別のid属性が指定されているべきです。', 'H93');
                     this._labelNames[labelFor] = null;
                 } else {
                     this._labelNames[labelFor] = labels[i];
