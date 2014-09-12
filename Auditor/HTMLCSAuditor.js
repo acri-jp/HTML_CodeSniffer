@@ -513,7 +513,7 @@ var HTMLCSAuditor = new function()
 
         var viewReportDiv       = _doc.createElement('div');
         viewReportDiv.id        = _prefix + 'settings-view-report';
-        viewReportDiv.innerHTML = 'View Report';
+        viewReportDiv.innerHTML = 'ÉåÉ|Å[ÉgÇå©ÇÈ';
 
         viewReportDiv.onclick = function() {
             if (/disabled/.test(this.className) === false) {
