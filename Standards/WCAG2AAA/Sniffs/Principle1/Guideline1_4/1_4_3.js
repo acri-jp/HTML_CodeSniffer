@@ -76,7 +76,7 @@ var HTMLCS_WCAG2AAA_Sniffs_Principle1_Guideline1_4_1_4_3 = {
 
                 if (isAbsolute === true) {
                     code += '.Abs';
-                    HTMLCS.addMessage(HTMLCS.WARNING, element, 'This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least ' + required + ':1.', code);
+                    HTMLCS.addMessage(HTMLCS.WARNING, element, 'この要素は絶対位置指定で配置され、背景色が検出できません。テキストと画像のすべてのカバー部分が少なくとも ' + required + ':1 のコントラスト比を持つことを確認します。', code);
                 } else if (hasBgImg === true) {
                     code += '.BgImage';
                     HTMLCS.addMessage(HTMLCS.WARNING, element, 'この要素のテキストは背景画像の上に配置されています。テキストと画像のすべてのカバー部分が少なくとも ' + required + ':1 のコントラスト比を持つことを確認します。', code);
