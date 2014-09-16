@@ -236,25 +236,25 @@ var HTMLCSAuditor = new function()
         var divider = ', &#160;<span class="' + _prefix + 'divider"></span>';
 
         if (errors > 0) {
-            var typeName = 'Errors';
+            var typeName = 'エラー';
             if (errors === 1) {
-                typeName = 'Error';
+                typeName = 'エラー';
             }
             leftContents.push('<strong>' + errors + '</strong> ' + typeName);
         }
 
         if (warnings > 0) {
-            var typeName = 'Warnings';
+            var typeName = '警告';
             if (warnings === 1) {
-                typeName = 'Warning';
+                typeName = '警告';
             }
             leftContents.push('<strong>' + warnings + '</strong> ' + typeName);
         }
 
         if (notices > 0) {
-            var typeName = 'Notices';
+            var typeName = '要確認';
             if (notices === 1) {
-                typeName = 'Notice';
+                typeName = '要確認';
             }
             leftContents.push('<strong>' + notices + '</strong> ' + typeName);
         }
@@ -354,7 +354,7 @@ var HTMLCSAuditor = new function()
         // Issue Count item.
         var lineageTotalsItem       = _doc.createElement('li');
         lineageTotalsItem.className = _prefix + 'lineage-item';
-        lineageTotalsItem.innerHTML = 'Issue ' + issue + ' of ' + totalIssues;
+        lineageTotalsItem.innerHTML = issue + ' 番目の課題(全' + totalIssues + '件中)';
 
         lineageHomeItem.appendChild(lineageHomeLink);
         lineageReportItem.appendChild(lineageReportLink);
@@ -566,10 +566,20 @@ var HTMLCSAuditor = new function()
             var levelCountDiv       = _doc.createElement('div');
             levelCountDiv.className = 'HTMLCS-tile-text';
 
-            var content = '<strong>' + msgCount + '</strong> ' + level.substr(0, 1).toUpperCase() + level.substr(1);
-            if (msgCount !== 1) {
-                content += 's';
-            }
+            var levelj = '';
+            switch( level ) { 
+                case 'error':
+                    levelj  = 'エラー';
+                    break;
+                case 'warning':
+                    levelj  = '警告';
+                    break;
+                case 'notice':
+                    levelj  = '要確認';
+                    break;
+            } 
+
+            var content = '<strong>' + msgCount + '</strong> ' + levelj;
 
             levelCountDiv.innerHTML = content;
 
@@ -837,7 +847,7 @@ var HTMLCSAuditor = new function()
             var msgSourceHeaderText       = _doc.createElement('strong');
             msgSourceHeaderText.innerHTML = '問題のHTML部分';
 
-            var btnPointTo = buildSummaryButton(_prefix + 'button-point-to-element-' + id, 'pointer', 'Point to Element', function() {
+            var btnPointTo = buildSummaryButton(_prefix + 'button-point-to-element-' + id, 'pointer', '問題の部分を指し示す', function() {
                 self.pointToElement(message.element);
             });
 
@@ -956,7 +966,7 @@ var HTMLCSAuditor = new function()
 
         var pageNum       = _doc.createElement('span');
         pageNum.className = _prefix + 'page-number';
-        pageNum.innerHTML = 'Page ' + page + ' of ' + totalPages;
+        pageNum.innerHTML = page + ' ページ (' + totalPages + ' ページ中)';
         navDiv.appendChild(pageNum);
 
         var next       = _doc.createElement('span');
@@ -982,7 +992,7 @@ var HTMLCSAuditor = new function()
             }
 
             pageNum.innerHTML = '';
-            pageNum.appendChild(document.createTextNode('Page ' + _page + ' of ' + totalPages));
+            pageNum.appendChild(document.createTextNode(_page + ' ページ (' + totalPages + ' ページ中)'));
 
             var issueList = _doc.querySelectorAll('.HTMLCS-issue-list')[0];
             issueList.style.marginLeft = ((_page - 1) * -300) + 'px';
@@ -1001,7 +1011,7 @@ var HTMLCSAuditor = new function()
             }
 
             pageNum.innerHTML = '';
-            pageNum.appendChild(document.createTextNode('Page ' + _page + ' of ' + totalPages));
+            pageNum.appendChild(document.createTextNode(_page + ' ページ (' + totalPages + ' ページ中)'));
 
             var issueList = _doc.querySelectorAll('.HTMLCS-issue-list')[0];
             issueList.style.marginLeft = ((_page - 1) * -300) + 'px';

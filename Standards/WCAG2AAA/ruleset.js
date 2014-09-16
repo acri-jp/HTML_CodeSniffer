@@ -73,20 +73,20 @@ window.HTMLCS_WCAG2AAA = {
     getMsgInfo: function(code) {
         var principles = {
             'Principle1': {
-                name: 'Perceivable',
-                link: 'http://www.w3.org/TR/WCAG20/#perceivable'
+                name: '知覚可能',
+                link: 'http://waic.jp/docs/WCAG20/Overview.html#perceivable'
                },
             'Principle2': {
-                name: 'Operable',
-                link: 'http://www.w3.org/TR/WCAG20/#operable'
+                name: '操作可能',
+                link: 'http://waic.jp/docs/WCAG20/Overview.html#operable'
                },
             'Principle3': {
-                name: 'Understandable',
-                link: 'http://www.w3.org/TR/WCAG20/#understandable'
+                name: '理解可能',
+                link: 'http://waic.jp/docs/WCAG20/Overview.html#understandable'
                },
             'Principle4': {
-                name: 'Robust',
-                link: 'http://www.w3.org/TR/WCAG20/#robust'
+                name: '堅牢性',
+                link: 'http://waic.jp/docs/WCAG20/Overview.html#robust'
                }
         }
 
@@ -97,13 +97,13 @@ window.HTMLCS_WCAG2AAA = {
 
         for (var i = 0; i < techniques.length; i++) {
             techniques[i]  = techniques[i].split('.');
-            techniquesStr.push('<a href="http://www.w3.org/TR/WCAG20-TECHS/' + techniques[i][0] + '" target="_blank">' + techniques[i][0] + '</a>');
+            techniquesStr.push('<a href="http://waic.jp/docs/WCAG-TECHS/' + techniques[i][0] + '" target="_blank">' + techniques[i][0] + '</a>');
         }
 
         var principleStr = ['<a href="', principles[principle].link, '" target="_blank">', principles[principle].name, '</a>'].join('');
         var retval = [
-            ['Principle', principleStr],
-            ['Techniques', techniquesStr.join(' ')]
+            ['原則', principleStr],
+            ['実装方法', techniquesStr.join(' ')]
         ];
 
         return retval;
